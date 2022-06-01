@@ -1,5 +1,10 @@
-function NavBar(){
+import './NavBar.css';
+import CartWidget from'./CartWidget.js';
+
+function NavBar(prop){
+  if(prop.ubicacion === 'arriba'){
   return (
+    <header>
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">Emprendimiento</a>
@@ -21,10 +26,22 @@ function NavBar(){
             </li>
 
           </ul>
+
+         <CartWidget/>
         </div>
       </div>
     </nav>
-)
+    </header>
+  )
+}else if(prop.ubicacion === 'abajo'){
+  return (
+  <footer>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center">
+      <p className="text-white ">Soy footer</p>
+    </nav>
+  </footer>
+    );
+  }
 }
 
 export default NavBar;
