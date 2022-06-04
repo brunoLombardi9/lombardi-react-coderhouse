@@ -10,7 +10,7 @@ function App(){
   return (
     <>
 <NavBar ubicacion= 'arriba'/>
-<ItemsListContainer greeting= 'Bienvenido a Emprendimiento'/>
+<ItemsListContainer/>
 <NavBar ubicacion= 'abajo'/>
     </>
     );

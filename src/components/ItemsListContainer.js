@@ -1,9 +1,10 @@
-import './ItemsListContainer.css'
+import './ItemsListContainer.css';
+import  ItemCount from './ItemCount.js';
 
-function ItemsListContainer(prop){
+function ItemsListContainer(){
 return (
   <main>
-    <p className="text-center h1">{prop.greeting}</p>
+    <ItemCount stock = {5} initial = {0} onAdd={()=>{}}/>
   </main>
   );
 }
