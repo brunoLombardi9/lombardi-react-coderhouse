@@ -18,13 +18,12 @@ function sumar(){
 }
 
 return (
-  <div className="col-lg-3 col-sm-4 bg-light card m-3 pb-3">
-    <p className='text-center h3 mt-3'>{contador}</p>
-    <div className="d-flex justify-content-center gap-5 mb-3">
+  <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center gap-3 mb-3">
       <button className="btn btn-primary mt-auto sumarRestarBotones" onClick={restar}>-</button>
+      <p className='text-center h3 mt-3'>{contador}</p>
       <button className="btn btn-primary mt-auto sumarRestarBotones" onClick={sumar}>+</button>
     </div>
-    <button className="btn btn-success mt-auto">Confirmar</button>
   </div>
   );
 }
