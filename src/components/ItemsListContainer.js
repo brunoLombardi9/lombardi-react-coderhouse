@@ -2,28 +2,18 @@ import './ItemsListContainer.css';
 import ItemList from './ItemList.js'
 import {useState, useEffect} from 'react';
 import products from '../utilities/products.js';
-
-
-const promesa = (tiempo, tarea) => {
-  return new Promise((res) => {
-    setTimeout(() => {
-      res(tarea);
-    }, tiempo)
-  });
-}
+import promesa from '../utilities/promesa.js'
 
 function ItemsListContainer(){
   const [items, setItems] = useState([]);
 
   useEffect(() => {
        promesa(2000, products)
-       .then(res => setItems(res))
-   }, [items])
+       .then(res => setItems(res));
+   }, [items]);
 
 return (
-    <main>
       <ItemList productos = {items}/>
-    </main>
   );
 }
 
